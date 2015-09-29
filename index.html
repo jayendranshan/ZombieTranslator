@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Week 3: Jasmine</title>
+    <title>Zombie Translator</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -13,16 +13,27 @@
 </head>
 <body>
     <div class="container">
-        <div class=""
-        <section class="col-md-6">
-            <form id="addSongForm" class="form-inline">
-                <label for="song">Song</label>
-                <input class="form-control" type="text" id="song" />
-                <button class="btn" type="submit" id="addSong">Add</button>
-            </form>
-        </section>
+        <div class="row well">
+            <div class="col-md-6">
+                <form id="english-to-zombie-form">
+                    <label for="english">English</label>
+                    <textarea class="form-control" id="english"></textarea>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form id="zombie-to-english-form">
+                    <label for="zombie">Zombie</label>
+                    <textarea class="form-control" id="zombie"></textarea>
+                </form>
+            </div>
+        </div>
 
-        <ul class="list-unstyled col-md-6" id="currentPlaylist"></ul>
+    <div class="col-md-6">
+        <button class="form-control" id="btnZombie" Text="Zombify">Zombify</button>
+    </div>
+    <div class="col-md-6">
+        <button class="form-control" id="btnUnZombie" Text="UnZombify">UnZombify</button>
+    </div>
 
     </div>
 </body>

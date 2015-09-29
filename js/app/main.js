@@ -1,7 +1,7 @@
-require(['jquery', 'PlaylistView', 'bootstrap'], function($, PlaylistView){
+require(['jquery', 'TranslateView', 'bootstrap'], function($, TranslateView){
   $(function(){
 
-    var playlist = new PlaylistView();
+    var translateView = new TranslateView();
 
   });
 });
