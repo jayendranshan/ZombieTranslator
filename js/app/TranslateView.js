@@ -9,7 +9,8 @@ var TranslateView = function(){
 
 TranslateView.prototype.zombify = function() {
 	//this.translator = new Translator();
-	$('#english').on('keyup', function(){
+	//$('#english').on('keyup', function(){
+	$('#btnZombie').click (function(){
 		this.translator = new Translator();
   	var that = this;
   	var rule1 = /r/g;
