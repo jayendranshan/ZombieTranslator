@@ -31,3 +31,9 @@ Note: Rule 3 was implemented as Rule8.
 * This application was tested using Jasmine
 * Karma is used to run the testing.
 
+# Results:
+
+1. Application works.
+2. Jasmine test success for all the tests.
+3. Karma test successful.
+
