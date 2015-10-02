@@ -39,33 +39,88 @@ define(['Translator'], function(Translator){
       expect(translator.zombifyRule()).toBe('');
     });
 
+    it('Zombies knows only Zero', function(){
+      expect(translator.zombifyRule('12345')).toBe('0000000000');
+    });
+
+     it('Zombies cant count', function(){
+      expect(translator.zombifyRule('12345')).not.toBe('12345');
+    });
+
     describe('Rules', function(){
       //it('Rule1 executed', function(){
         //expect(translator.zombifyRule('r')).toBe('RRh');
       //});
+      it('Rule1 - replaces r at the end of the string', function(){
+        expect(translator.zombifyRule1('ttssbcdr')).toEqual('ttssbcdrh');
+      });
 
-      it('Rule2 executed', function(){
+      it('Rule1 - returns a value', function(){
+        expect(translator.zombifyRule1Test('mirror')).toEqual(true);
+      });
+
+      it('Rule1 - empty string returns false', function(){
+        expect(translator.zombifyRule3Test()).not.toEqual(true);
+      });
+
+      it('Rule2 - a/A is hra', function(){
         expect(translator.zombifyRule('a')).toBe('hra');
       });
 
-      it('Rule4 executed', function(){
+      it('Rule2 - a/A is not a/A', function(){
+        expect(translator.zombifyRule('a')).not.toBe('a');
+      });
+
+      it('Rule3 - caplitalize the start of string as per the rule', function(){
+        expect(translator.zombifyRule3('bcd. grh? qwe! yt')).toBe('bcd. Grh? Qwe! Yt');
+      });
+
+      it('Rule3 - returns a value', function(){
+        expect(translator.zombifyRule3Test('aabcd. ')).toEqual(true);
+      });
+
+      it('Rule3 - empty string returns false', function(){
+        expect(translator.zombifyRule3Test()).not.toEqual(true);
+      });
+
+      it('Rule4 - e/E is rr', function(){
         expect(translator.zombifyRule('e')).toBe('rr');
       });
 
-      it('Rule5 executed', function(){
+       it('Rule4 - e/E is not e/E', function(){
+        expect(translator.zombifyRule('e')).not.toBe('e');
+      });
+
+      it('Rule5 - i/I is rrRr', function(){
         expect(translator.zombifyRule('i')).toBe('rrRr');
       });
 
-      it('Rule6 executed', function(){
+      it('Rule5 - i/I is not i/I', function(){
+        expect(translator.zombifyRule('i')).not.toBe('i');
+      });
+
+      it('Rule6 - o/O is rrrRr', function(){
         expect(translator.zombifyRule('o')).toBe('rrrRr');
       });
 
-      it('Rule7 executed', function(){
+      it('Rule6 - o/O is not o/O', function(){
+        expect(translator.zombifyRule('o')).not.toBe('o');
+      });
+
+      it('Rule7 - u/U is rrrrRr', function(){
         expect(translator.zombifyRule('u')).toBe('rrrrRr');
       });
 
-      it('Rule8 executed', function(){
-        expect(translator.zombifyRule('r')).toBe('RR');
+       it('Rule7 - u/U is not u/U', function(){
+        expect(translator.zombifyRule('u')).not.toBe('u');
+      });
+
+      it('Rule8 - numbers to zero', function(){
+        expect(translator.zombifyRule('123ae')).toBe('00000hrarr');
+      });
+
+      it('Rule8 - not numbers to numbers', function(){
+        expect(translator.zombifyRule('123ae')).not.toBe('123ae');
       });
 
       /*it('Rule8 executed', function(){
@@ -80,18 +135,6 @@ define(['Translator'], function(Translator){
         expect(translator.zombifyRule('r')).toBe('RRh');
       });*/
     });
-    //it('Playlist has a song', function(){
-
-      //expect(playlist.playlist.length).toBe(0);
-    //});
-
-    //describe('addSong', function(){
-
-    	//it('Song has been added', function(){
-    		//playlist.playlist.addSong();
-    		//playlist.playlist.updatePlaylist();
-      		//expect(playlist.playlist.length).toBe(0);
-    //});
     
     }); 
 });
