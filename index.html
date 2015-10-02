@@ -13,27 +13,30 @@
 </head>
 <body>
     <div class="container">
+        <h2>Zombie Translator</h2>
         <div class="row well">
             <div class="col-md-6">
                 <form id="english-to-zombie-form">
-                    <label for="english">English</label>
+                    <h5><label for="english" class="text-success">English</label></h5>
                     <textarea class="form-control" id="english"></textarea>
                 </form>
             </div>
             <div class="col-md-6">
                 <form id="zombie-to-english-form">
-                    <label for="zombie">Zombie</label>
+                    <h5><label for="zombie" class="text-success" >Zombie</label></h5>
                     <textarea class="form-control" id="zombie"></textarea>
                 </form>
             </div>
+
+            <div class="col-md-4" style="margin-top:20px;vertical-align: middle;">
+                <button class="btn btn-primary" id="btnZombie" Text="Zombify">Zombify</button>
+            </div>
         </div>
 
-    <div class="col-md-6">
-        <button class="form-control" id="btnZombie" Text="Zombify">Zombify</button>
-    </div>
-    <div class="col-md-6">
+    
+    <!--<div class="col-md-6">
         <button class="form-control" id="btnUnZombie" Text="UnZombify">UnZombify</button>
-    </div>
+    </div>-->
 
     </div>
 </body>

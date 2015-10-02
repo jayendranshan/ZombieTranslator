@@ -17,7 +17,9 @@ This is the first assignment of Advanced Javascript course. This application tra
 7. Converts "u" or "U" to be "rrrrRr"
 8. Converts any number of numerics to be "00000".
 9. Converts "s" in any place only if it is lower case to be "sasa"
-10. Converts "t" in any place only if it is lower case to be "tartaa" .
+10. Converts "t" in any place only if it is lower case to be "tartaa".
+
+Note: Rule 3 was implemented as Rule8.
 
 # Technology used
 
