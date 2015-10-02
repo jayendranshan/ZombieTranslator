@@ -123,17 +123,22 @@ define(['Translator'], function(Translator){
         expect(translator.zombifyRule('123ae')).not.toBe('123ae');
       });
 
-      /*it('Rule8 executed', function(){
-        expect(translator.zombifyRule('r')).toBe('RRh');
+      it('Rule9 - s is sasa', function(){
+        expect(translator.zombifyRule('s')).toBe('sasa');
       });
 
-      it('Rule9 executed', function(){
-        expect(translator.zombifyRule('r')).toBe('RRh');
+      it('Rule9 correct value doesnt throw error', function(){
+        expect(translator.zombifyRule('s')).toBeDefined();
       });
 
-      it('Rule10 executed', function(){
-        expect(translator.zombifyRule('r')).toBe('RRh');
-      });*/
+      it('Rule10 - t is tartaa', function(){
+        expect(translator.zombifyRule('t')).toBe('tartaa');
+      });
+
+      it('Rule10 - replaced string matches', function(){
+        expect(translator.zombifyRule('ta')).toMatch('hra');
+      });
+
     });
     
     }); 

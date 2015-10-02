@@ -13,8 +13,8 @@ Translator.prototype.zombifyRule = function(sentence){
 	var rule6 = /o/gi;
 	var rule7 = /u/gi;
 	var rule8 = /\d+/g;
-	var rule9 = /r/g;
-	var rule10 = /r/g;
+	var rule9 = /s/g;
+	var rule10 = /t/g;
 	try
 	{
 		var isNumber = isNaN(sentence);
@@ -30,15 +30,15 @@ Translator.prototype.zombifyRule = function(sentence){
 		{
 			var newstr='';
 			newstr = this.zombifyRule1(sentence);
-			//alert(newstr);
 			newstr = newstr.replace(rule2, 'hra');
-			
 			newstr = newstr.replace(rule4, 'rr');
 			newstr = newstr.replace(rule5, 'rrRr');
 			newstr = newstr.replace(rule6, 'rrrRr');
 			newstr = newstr.replace(rule7, 'rrrrRr');
 			newstr = newstr.replace(rule8, '00000');
 			newstr = this.zombifyRule3(newstr);
+			newstr = newstr.replace(rule9, 'sasa');
+			newstr = newstr.replace(rule10, 'tartaa');
 			//newstr = newstr.replace(rule8, 'RR');
 			return newstr;
 			//alert(newstr);
@@ -82,6 +82,7 @@ Translator.prototype.zombifyRule3 = function(str){
 	return newStr;
 };
 
+//this function is test Rule1 only.
 Translator.prototype.zombifyRule1Test = function(str){
 	var rule1 = /r/g;
 	var newArray=[];
@@ -114,6 +115,7 @@ Translator.prototype.zombifyRule1Test = function(str){
 		
 };
 
+//this function is test Rule3 only.
 Translator.prototype.zombifyRule3Test = function(str){
 	try
 	{
