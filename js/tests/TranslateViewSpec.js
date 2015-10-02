@@ -64,6 +64,10 @@ define(['Translator'], function(Translator){
       });
 
       it('Rule2 - a/A is hra', function(){
+        expect(translator.zombifyRule('a')).toBeDefined();
+      });
+
+      it('Rule2 - a/A is hra', function(){
         expect(translator.zombifyRule('a')).toBe('hra');
       });
 
@@ -73,6 +77,10 @@ define(['Translator'], function(Translator){
 
       it('Rule3 - caplitalize the start of string as per the rule', function(){
         expect(translator.zombifyRule3('bcd. grh? qwe! yt')).toBe('bcd. Grh? Qwe! Yt');
+      });
+
+      it('Rule3 - did not caplitalize after "." because no space after "."', function(){
+        expect(translator.zombifyRule3('bcd.grh? qwe! yt')).not.toBe('bcd. Grh? Qwe! Yt');
       });
 
       it('Rule3 - returns a value', function(){
@@ -137,6 +145,10 @@ define(['Translator'], function(Translator){
 
       it('Rule10 - replaced string matches', function(){
         expect(translator.zombifyRule('ta')).toMatch('hra');
+      });
+
+      it('Rule10 - replaced string doesnt matches', function(){
+        expect(translator.zombifyRule('r')).not.toMatch('hra');
       });
 
     });

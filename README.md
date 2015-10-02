@@ -21,6 +21,15 @@ This is the first assignment of Advanced Javascript course. This application tra
 
 Note: Rule 3 was implemented as Rule8.
 
+# Rules Used:
+
+1. toBeDefined
+2. toBe
+3. toEqual
+4. not.toBe
+5. not.toEqual
+6. toMatch
+
 # Technology used
 
 * Javascript, JQuery and RequireJS modules design.
