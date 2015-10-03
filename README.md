@@ -19,7 +19,7 @@ This is the first assignment of Advanced Javascript course. This application tra
 9. Converts "s" in any place only if it is lower case to be "sasa"
 10. Converts "t" in any place only if it is lower case to be "tartaa".
 
-Note: Rule 3 was implemented as Rule8.
+Note: Rule 3 was implemented as Step 8 (Rule8).
 
 # Rules Used:
 
@@ -29,6 +29,23 @@ Note: Rule 3 was implemented as Rule8.
 4. not.toBe
 5. not.toEqual
 6. toMatch
+
+# Where rules are tested:
+
+1. Valid sentence doesnt throw error for the translator- toBeDefined()
+2. No input doesnt throw error - toBe()
+3. Zombies knows only Zero - toBe()
+4. Zombies cant count - not.toBe()
+5. Rule1 - toEqual and not.toEqual.
+6. Rule2 - toBeDefined() ,toBe() and not.toBe()
+7. Rule3 - toBe, not.toBe() , toEqual and not.toEqual.
+8. Rule4 - toBe and not.toBe
+9. Rule5 - toBe and not.toBe
+10. Rule6 - toBe and not.toBe
+11. Rule7 - toBe and not.toBe
+12. Rule8 - toBe and not.toBe
+13. Rule9 - toBe and toBeDefined
+14. Rule10 - toBe, toMatch and not.toMatch.
 
 # Technology used
 
